@@ -29,7 +29,7 @@ class FileStorage:
         with open(FileStorage.__file_path, 'w') as fname:
             for key, val in FileStorage.__objects.items():
                 dic_object[key] = val.to_dict()
-            fname.write(json.dumps(dic_object))
+            json.dump(dic_object, fname)
 
     def reload(self):
         """ Reload the file """
