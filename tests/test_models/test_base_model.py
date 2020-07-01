@@ -77,8 +77,8 @@ class test_for_base_model(unittest.TestCase):
 
     def test_datetime(self):
         """ check datatime """
-        base1 = BaseModel()
-        self.assertFalse(datetime.now() == base1.created_at)
+        bas1 = BaseModel()
+        self.assertFalse(datetime.now() == bas1.created_at)
 
     def test_BaseModel(self):
         """ check attributes values in a BaseModel """
@@ -92,3 +92,18 @@ class test_for_base_model(unittest.TestCase):
         self.assertEqual(self.my_model.my_number, my_model_json['my_number'])
         self.assertEqual('BaseModel', my_model_json['__class__'])
         self.assertEqual(self.my_model.id, my_model_json['id'])
+
+    def test_savefirst(self):
+        """check numbers"""
+        with self.assertRaises(AttributeError):
+            BaseModel.save([455, 323232, 2323, 2323, 23332])
+
+    def test_savesecond(self):
+        """ check string """
+        with self.assertRaises(AttributeError):
+            BaseModel.save("THIS IS A TEST")
+
+    def test_inst(self):
+        """check class """
+        ml = BaseModel()
+        self.assertTrue(ml, BaseModel)
