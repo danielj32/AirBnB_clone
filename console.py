@@ -18,7 +18,9 @@ from models.review import Review
 class HBNBCommand(cmd.Cmd):
     """ General Class for HBNBCommand """
     prompt = '(hbnb) '
-    classes = {'BaseModel': BaseModel}
+    classes = {'BaseModel': BaseModel, 'User': User, 'City': City,
+               'Place': Place, 'Amenity': Amenity, 'Review': Review,
+               'State': State}
 
     def do_quit(self, arg):
         """ Exit method for quit typing """
