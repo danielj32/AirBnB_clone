@@ -20,7 +20,7 @@ class FileStorage:
 
     def new(self, obj):
         """ sets in dictionary the obj with key <obj class name>.id """
-        FileStorage.__objects[obj.__class__.__name__ + "." + obj.id] = obj
+        FileStorage.__objects[obj.__class__.__name__ + "." + str(obj.id)] = obj
 
     def save(self):
         """ serializes objectss to the JSON file (path: __file_path) """
@@ -31,11 +31,9 @@ class FileStorage:
 
     def reload(self):
         """ Reload the file """
-        try:
+        if (os.path.isfile(FileStorage.__file_path)):
             with open(FileStorage.__file_path, 'r', encoding="utf-8") as fname:
                 l_json = json.load(fname)
                 for key, val in l_json.items():
-                    FileStorage.__objects[key] = val(
-                        value['__class__'](**value))
-        except:
-            pass
+                    FileStorage.__objects[key] = eval(
+                        val['__class__'](**val))
