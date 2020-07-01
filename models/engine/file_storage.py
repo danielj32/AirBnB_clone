@@ -20,15 +20,13 @@ class FileStorage:
 
     def new(self, obj):
         """ sets in dictionary the obj with key <obj class name>.id """
-        k = obj.__class__.__name__ + "." + obj.id
-        FileStorage.__objects[k] = obj
+        FileStorage.__objects[obj.__class__.__name__ + "." + obj.id] = obj
 
     def save(self):
         """ serializes objectss to the JSON file (path: __file_path) """
-        dic_object = {}
         with open(FileStorage.__file_path, 'w', encoding="utf-8") as fname:
             for key, val in FileStorage.__objects.items():
-                dic_object[key] = val.to_dict()
+                dic_object = {key: val.to_dict()}
             json.dump(dic_object, fname)
 
     def reload(self):
