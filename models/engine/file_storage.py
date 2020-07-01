@@ -26,7 +26,7 @@ class FileStorage:
     def save(self):
         """ serializes objectss to the JSON file (path: __file_path) """
         dic_object = {}
-        with open(FileStorage.__file_path, 'w') as fname:
+        with open(FileStorage.__file_path, 'w', encoding="utf-8") as fname:
             for key, val in FileStorage.__objects.items():
                 dic_object[key] = val.to_dict()
             json.dump(dic_object, fname)
@@ -36,8 +36,8 @@ class FileStorage:
         try:
             with open(FileStorage.__file_path, 'r', encoding="utf-8") as fname:
                 l_json = json.load(fname)
-            for key, val in l_json.items():
-                val = ['__class__'](**val)
-                FileStorage.__objects[key] = val
+                for key, val in l_json.items():
+                    FileStorage.__objects[key] = val(
+                        value['__class__'](**value))
         except:
             pass
