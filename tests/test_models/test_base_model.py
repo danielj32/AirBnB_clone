@@ -8,6 +8,7 @@ from datetime import datetime
 
 
 class BaseModel_testing(unittest.TestCase):
+    """ check BaseModel """
 
     def testpep8(self):
         """ testing codestyle """
@@ -21,6 +22,7 @@ class BaseModel_testing(unittest.TestCase):
 
 class test_for_base_model(unittest.TestCase):
     """ Class test for BaseModel """
+    my_model = BaseModel()
 
     def TearDown(self):
         """ delete json file """
@@ -77,3 +79,16 @@ class test_for_base_model(unittest.TestCase):
         """ check datatime """
         base1 = BaseModel()
         self.assertFalse(datetime.now() == base1.created_at)
+
+    def test_BaseModel(self):
+        """ check attributes values in a BaseModel """
+
+        self.my_model.name = "Holbie"
+        self.my_model.my_number = 100
+        self.my_model.save()
+        my_model_json = self.my_model.to_dict()
+
+        self.assertEqual(self.my_model.name, my_model_json['name'])
+        self.assertEqual(self.my_model.my_number, my_model_json['my_number'])
+        self.assertEqual('BaseModel', my_model_json['__class__'])
+        self.assertEqual(self.my_model.id, my_model_json['id'])
