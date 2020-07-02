@@ -2,7 +2,7 @@
 """ testing city """
 import unittest
 import pep8
-from models.user import User
+from models.city import City
 
 class City_testing(unittest.TestCase):
     """ check BaseModel """

@@ -2,7 +2,7 @@
 """ testing Review """
 import unittest
 import pep8
-from models.user import User
+from models.review import Review
 
 class Review_testing(unittest.TestCase):
     """ check BaseModel """
