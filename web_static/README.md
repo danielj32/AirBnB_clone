@@ -1,4 +1,4 @@
-![Holberton school logo](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/6/65f4a1dd9c51265f49d0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUWMNL5ANN%2F20200712%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200712T063449Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=5a8b659f6f29ce984daf8602c2ba6c389282061ba2ce9feefaa9720c7fe494b6)
+![Holberton school logo](https://storage.googleapis.com/www-paredro-com/uploads/2019/03/El-logo-de-Airbnb-es-el-si%CC%81mbolo-de-la-gente-lugares-amor-y-un-22A22.jpg)
 # 0x01. AirBnB clone - Web static
 This directory is about web with style in css
 ### about links for view web-sites:
