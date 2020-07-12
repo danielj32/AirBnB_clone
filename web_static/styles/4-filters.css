@@ -19,6 +19,6 @@ section.filters button {
     background-color: #FF5A5F;
 }
 
-button:hover {
+section.filters button:hover {
     opacity: 0.9;
 }
