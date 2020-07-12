@@ -1,24 +1,30 @@
-.filters {
-    background-color: white;
-    height: 70px;
-    width: 100px;
-    border-radius: 4px;
-    border: 1px solid #DDDDDD;
-    align-items: center;
-    display: flex;
-    justify-content: flex-end;
+body {
+    margin:0px;
+	padding:0px;
+    font-size:14px;
+    font-family:Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color:#484848;
+	display:block;
+	position:relative;
+	min-height:100vh;
 }
-section.filters button {
-    color: white;
-    font-size: 18px;
-    height: 48px;
-    width: 20%;
-    margin-right: 30px;
-    opacity: 1;
-    border: 0px;
-    background-color: #FF5A5F;
+.container {
+	max-width:1000px;
+	margin:30px auto 0 auto;
+	padding-bottom:90px;
 }
-
-section.filters button:hover {
-    opacity: 0.9;
+button {
+	font-size:18px;
+	color:#FFFFFF;
+	background-color:#FF5A5F;
+	height:48px;
+	width:20%;
+	border-style:none;
+	border-radius:4px;
+	position:absolute;
+	right:30px;
+	top:11px;
+}
+button:hover{
+	opacity:0.9;
 }
