@@ -44,7 +44,3 @@
 .filters div:first-child {
     border-right: 1px solid #DDDDDD;
 }
-
-button:hover {
-    opacity: 0.9;
-}
