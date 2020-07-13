@@ -44,3 +44,11 @@
 .filters div:first-child {
     border-right: 1px solid #DDDDDD;
 }
+.filters {
+	background-color:white;
+	height:70px;
+	width:100%;
+	border:1px solid #DDDDDD;
+	border-radius:4px;
+	position:relative;
+}
