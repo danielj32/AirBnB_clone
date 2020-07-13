@@ -163,3 +163,7 @@ ul {
     margin-right: 30px;
     margin-left: auto;
 }
+
+.filters div:first-child {
+    border-right: 1px solid #DDDDDD;
+}
